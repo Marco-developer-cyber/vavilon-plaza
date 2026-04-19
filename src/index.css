@@ -2,95 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Vavilon Plaza Hotel — Luxury Oriental Design System
+   Gold + Deep Navy + Ivory
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand palette */
+    --background: 222 50% 9%;          /* Deep navy #0B1426 */
+    --foreground: 43 56% 89%;          /* Ivory #F5EDD6 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --navy: 222 50% 9%;
+    --navy-deep: 222 55% 6%;
+    --navy-soft: 222 40% 14%;
+    --ivory: 43 56% 89%;
+    --ivory-soft: 43 40% 95%;
+    --gold: 41 60% 56%;                /* Rich gold */
+    --gold-light: 43 75% 70%;
+    --gold-deep: 38 65% 42%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 222 45% 12%;
+    --card-foreground: 43 56% 89%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 222 50% 9%;
+    --popover-foreground: 43 56% 89%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 41 60% 56%;             /* Gold */
+    --primary-foreground: 222 55% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 43 56% 89%;
+    --secondary-foreground: 222 55% 6%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 222 30% 20%;
+    --muted-foreground: 43 30% 75%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 41 60% 56%;
+    --accent-foreground: 222 55% 6%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 43 56% 89%;
 
-    --radius: 0.5rem;
+    --border: 41 40% 35% / 0.2;
+    --input: 222 30% 20%;
+    --ring: 41 60% 56%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.25rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse at top, hsl(222 45% 14%) 0%, hsl(222 55% 6%) 70%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 75% 70%) 0%, hsl(41 60% 56%) 50%, hsl(38 65% 42%) 100%);
+    --gradient-gold-soft: linear-gradient(135deg, hsl(41 60% 56% / 0.15) 0%, hsl(43 75% 70% / 0.05) 100%);
+    --gradient-navy-fade: linear-gradient(180deg, hsl(222 55% 6% / 0) 0%, hsl(222 55% 6%) 100%);
+    --gradient-text-gold: linear-gradient(135deg, hsl(43 80% 75%) 0%, hsl(41 60% 56%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-gold: 0 0 40px hsl(41 60% 56% / 0.35), 0 0 80px hsl(41 60% 56% / 0.15);
+    --shadow-gold-strong: 0 0 60px hsl(41 60% 56% / 0.55), 0 0 120px hsl(41 60% 56% / 0.25);
+    --shadow-elegant: 0 25px 60px -15px hsl(222 80% 3% / 0.6);
+    --shadow-card: 0 20px 50px -20px hsl(222 80% 3% / 0.8);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Transitions */
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-luxe: cubic-bezier(0.65, 0, 0.35, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (kept) */
+    --sidebar-background: 222 50% 9%;
+    --sidebar-foreground: 43 56% 89%;
+    --sidebar-primary: 41 60% 56%;
+    --sidebar-primary-foreground: 222 55% 6%;
+    --sidebar-accent: 222 40% 14%;
+    --sidebar-accent-foreground: 43 56% 89%;
+    --sidebar-border: 41 40% 35% / 0.2;
+    --sidebar-ring: 41 60% 56%;
   }
 }
 
@@ -99,7 +83,210 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.3);
+    color: hsl(var(--ivory));
+  }
+}
+
+@layer components {
+  /* Gold text gradient */
+  .text-gold-gradient {
+    background: var(--gradient-text-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Hairline divider with gold dot */
+  .hairline {
+    @apply relative flex items-center justify-center gap-3;
+  }
+  .hairline::before, .hairline::after {
+    content: '';
+    @apply h-px w-16 md:w-24;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.6), transparent);
+  }
+
+  /* Luxe gold button */
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center px-10 py-4 font-medium uppercase tracking-[0.25em] text-sm text-navy-deep overflow-hidden transition-all duration-500;
+    background: var(--gradient-gold);
+    box-shadow: var(--shadow-gold);
+  }
+  .btn-gold::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    background: linear-gradient(135deg, hsl(43 90% 80%), hsl(41 70% 60%));
+  }
+  .btn-gold:hover::before {
+    @apply opacity-100;
+  }
+  .btn-gold:hover {
+    box-shadow: var(--shadow-gold-strong);
+    transform: translateY(-2px);
+  }
+  .btn-gold > * {
+    @apply relative z-10;
+  }
+
+  /* Outline gold button */
+  .btn-gold-outline {
+    @apply relative inline-flex items-center justify-center px-8 py-3 font-medium uppercase tracking-[0.25em] text-xs border transition-all duration-500;
+    border-color: hsl(var(--gold) / 0.5);
+    color: hsl(var(--gold-light));
+  }
+  .btn-gold-outline:hover {
+    border-color: hsl(var(--gold));
+    background: hsl(var(--gold) / 0.08);
+    box-shadow: 0 0 30px hsl(var(--gold) / 0.25);
+  }
+
+  /* WhatsApp button */
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-white transition-all duration-300;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    box-shadow: 0 10px 30px -10px rgba(37, 211, 102, 0.5);
+  }
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px -10px rgba(37, 211, 102, 0.7);
+  }
+
+  /* Section padding */
+  .section-pad {
+    @apply py-20 md:py-32 px-6 md:px-12;
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ornament decoration */
+  .ornament-divider {
+    @apply flex items-center justify-center gap-4 my-6;
+  }
+
+  /* Card luxe */
+  .card-luxe {
+    @apply relative bg-card transition-all duration-700;
+    border: 1px solid hsl(var(--gold) / 0.15);
+  }
+  .card-luxe::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700 pointer-events-none;
+    background: var(--gradient-gold-soft);
+  }
+  .card-luxe:hover {
+    border-color: hsl(var(--gold) / 0.6);
+    box-shadow: var(--shadow-gold), var(--shadow-card);
+    transform: translateY(-8px);
+  }
+  .card-luxe:hover::before {
+    @apply opacity-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animated gold shimmer */
+  .shimmer {
+    background: linear-gradient(110deg, hsl(var(--gold)) 30%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 70%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 30px hsl(var(--gold) / 0.4); }
+    50% { box-shadow: 0 0 50px hsl(var(--gold) / 0.7); }
+  }
+  .animate-pulse-gold {
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 1s var(--transition-smooth) both;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in-slow {
+    animation: fade-in 2s ease-out both;
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-scale-in {
+    animation: scale-in 1.2s var(--transition-smooth) both;
+  }
+
+  @keyframes slide-down {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-slide-down {
+    animation: slide-down 0.5s var(--transition-smooth) both;
+  }
+
+  @keyframes ornament-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-ornament-spin {
+    animation: ornament-spin 60s linear infinite;
   }
 }
