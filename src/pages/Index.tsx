@@ -747,7 +747,7 @@ const Footer = () => (
       </div>
 
       <p className="text-center text-xs text-ivory/40 tracking-wider">
-        © 2025 Vavilon Plaza Hotel · Bukhara, Uzbekistan · Все права защищены
+        © 2026 Vavilon Plaza Hotel · Bukhara, Uzbekistan · Все права защищены
       </p>
     </div>
   </footer>
