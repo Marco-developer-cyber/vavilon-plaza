@@ -285,7 +285,7 @@ const Hero = () => {
         </div>
 
         {/* CTA */}
-        <a
+        {/* <a
           href="https://wa.me/998973018088?text=Здравствуйте!%20Хочу%20забронировать%20номер%20в%20Vavilon%20Plaza%20Hotel"
           target="_blank"
           rel="noreferrer"
@@ -293,7 +293,7 @@ const Hero = () => {
           style={{ animationDelay: "1.2s" }}
         >
           <span>Забронировать</span>
-        </a>
+        </a> */}
       </div>
 
       {/* Scroll indicator */}
