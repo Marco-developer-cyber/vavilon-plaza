@@ -110,7 +110,7 @@ const Navbar = () => {
           ))}
         </ul>
         <a
-          href="https://wa.me/998973018088?text=Здравствуйте!%20Хочу%20забронировать%20номер%20в%20Vavilon%20Plaza%20Hotel"
+          href="https://www.booking.com/hotel/uz/bukhara-vavilon-plaza.ru.html?aid=356938&label=metagha-link-MRUZ-hotel-15065952_dev-desktop_los-1_bw-27_dow-Sunday_defdate-0_room-0_gstadt-2_rateid-ein1_aud-9181518013_gacid-21411118307_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260517_ppt-G1Bd_lp-2860_r-17864283779800632754&sid=6f24cb5593cca1948477b4ec9d0e9acd&all_sr_blocks=1506595202_422422311_0_1_0&checkin=2026-05-17&checkout=2026-05-18&dest_id=15065952&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1506595202_422422311_0_1_0&hpos=1&matching_block_id=1506595202_422422311_0_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1506595202_422422311_0_1_0__5609&srepoch=1776691004&srpvid=921f5d56fa2e04e4&type=total&ucfs=1&"
           target="_blank"
           rel="noreferrer"
           className="hidden lg:inline-flex btn-gold-outline"
@@ -155,7 +155,7 @@ const Navbar = () => {
           ))}
           <li className="mt-6">
             <a
-              href="https://wa.me/998973018088"
+              href="https://www.booking.com/hotel/uz/bukhara-vavilon-plaza.ru.html?aid=356938&label=metagha-link-MRUZ-hotel-15065952_dev-desktop_los-1_bw-27_dow-Sunday_defdate-0_room-0_gstadt-2_rateid-ein1_aud-9181518013_gacid-21411118307_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260517_ppt-G1Bd_lp-2860_r-17864283779800632754&sid=6f24cb5593cca1948477b4ec9d0e9acd&all_sr_blocks=1506595202_422422311_0_1_0&checkin=2026-05-17&checkout=2026-05-18&dest_id=15065952&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1506595202_422422311_0_1_0&hpos=1&matching_block_id=1506595202_422422311_0_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1506595202_422422311_0_1_0__5609&srepoch=1776691004&srpvid=921f5d56fa2e04e4&type=total&ucfs=1&"
               target="_blank"
               rel="noreferrer"
               onClick={() => setMenuOpen(false)}
